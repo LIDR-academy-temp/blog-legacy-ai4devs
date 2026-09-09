@@ -1,4 +1,3 @@
 import { PostSchema } from '#database/schema'
 
-export default class Post extends PostSchema {
-}
+export default class Post extends PostSchema {}

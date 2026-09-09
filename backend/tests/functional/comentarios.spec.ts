@@ -326,9 +326,9 @@ test.group('PATCH /comentarios/:id', (group) => {
   }) => {
     // Arrange
     await db.table('posts').insert(filaPost())
-    await db.table('comentarios').insert(
-      filaComentario({ autor_email: 'lucia.ferrer@ejemplo.es', estado: 'aprobado' })
-    )
+    await db
+      .table('comentarios')
+      .insert(filaComentario({ autor_email: 'lucia.ferrer@ejemplo.es', estado: 'aprobado' }))
 
     // Act
     const respuesta = await client.patch('/comentarios/5001').json({

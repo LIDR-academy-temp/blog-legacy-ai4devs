@@ -1,4 +1,4 @@
-import Comentario from '#models/comentario'
+import type Comentario from '#models/comentario'
 import ComentarioRepository from '#repositories/comentario_repository'
 import PostRepository from '#repositories/post_repository'
 
@@ -39,7 +39,12 @@ export class ComentarioService {
    */
   async crear(
     slug: string,
-    datos: { autor_nombre?: string; autor_email?: string; cuerpo?: string; padre_id?: number | null }
+    datos: {
+      autor_nombre?: string
+      autor_email?: string
+      cuerpo?: string
+      padre_id?: number | null
+    }
   ): Promise<ResultadoCrear> {
     const post = await this.postRepositorio.buscarPublicadoPorSlug(slug)
     if (!post) return { tipo: 'post_no_encontrado' }

@@ -1,5 +1,5 @@
 import { BaseTransformer } from '@adonisjs/core/transformers'
-import Comentario from '#models/comentario'
+import type Comentario from '#models/comentario'
 
 /**
  * Mismos nombres de campo que devolvía el `select *` de start/routes.ts
