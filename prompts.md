@@ -33,3 +33,4 @@ para que se sepa dónde empieza y dónde acaba.
 ```
 
 **Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+### Usa el agente auditor para auditar la feature de comentarios y deja el resultado en docs/auditoria/comentarios.md
